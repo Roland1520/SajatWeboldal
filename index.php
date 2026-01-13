@@ -9,16 +9,16 @@ $personalInfo = [
     'phone' => '+36 20 270 6492',
     'location' => 'Zalaegerszeg, Magyarország',
     'status' => 'Elérhető',
-    'bio_short' => 'Szenvedélyem a modern, felhasználóbarát webes alkalmazások készítése. Szeretem a tiszta kódot és az elegáns megoldásokat.',
+    'bio_short' => 'Szeretem a modern, felhasználóbarát webes alkalmazásokat. A tiszta kód és az elegáns megoldások embere vagyok.',
     'bio_long_1' => 'Mindig is érdekelt, hogyan működnek a dolgok a színfalak mögött. Programozóként az a célom, hogy komplex problémákat oldjak meg egyszerű, de hatékony eszközökkel.',
-    'bio_long_2' => 'Jelenleg szabadúszóként dolgozom, és nyitott vagyok új kihívásokra. Amikor nem kódolok, szeretek [ide írhatsz hobbit, pl. túrázni, olvasni, gamelni].'
+    'bio_long_2' => 'Jelenleg 2. éves programtervező informatikus hallgató vagyok az Eötvös Loránd Tudományegyetemen. Amikor nem kódolok, szeretek [pl. túrázni, gamelni].'
 ];
 
 // Közösségi média linkek
 $socials = [
-    'github' => '#',
-    'linkedin' => '#',
-    'twitter' => '#',
+    'github' => 'https://github.com/Roland1520',
+    'gmail' => 'mailto:troznairoland@gmail.com',
+    'facebook' => 'https://www.facebook.com/profile.php?id=100013607384042',
 ];
 
 // Készségek (Ikonok: FontAwesome osztályok)
@@ -26,10 +26,10 @@ $skills = [
     ['name' => 'HTML5', 'icon' => 'fab fa-html5', 'color' => 'text-orange-500', 'border' => 'hover:border-blue-500'],
     ['name' => 'CSS3', 'icon' => 'fab fa-css3-alt', 'color' => 'text-blue-500', 'border' => 'hover:border-blue-500'],
     ['name' => 'JavaScript', 'icon' => 'fab fa-js', 'color' => 'text-yellow-400', 'border' => 'hover:border-yellow-500'],
-    ['name' => 'React', 'icon' => 'fab fa-react', 'color' => 'text-cyan-400', 'border' => 'hover:border-cyan-500'],
+    ['name' => 'Php', 'icon' => 'fab fa-php', 'color' => 'text-purple-500', 'border' => 'hover:border-purple-500'],
     ['name' => 'Node.js', 'icon' => 'fab fa-node', 'color' => 'text-green-500', 'border' => 'hover:border-green-500'],
-    ['name' => 'Python', 'icon' => 'fab fa-python', 'color' => 'text-blue-400', 'border' => 'hover:border-blue-400'],
-    ['name' => 'SQL / NoSQL', 'icon' => 'fas fa-database', 'color' => 'text-gray-400', 'border' => 'hover:border-gray-500'],
+    ['name' => 'C / C#', 'icon' => 'fab fa-c', 'color' => 'text-blue-400', 'border' => 'hover:border-blue-400'],
+    ['name' => 'SQL / MySQL', 'icon' => 'fas fa-database', 'color' => 'text-gray-400', 'border' => 'hover:border-gray-500'],
     ['name' => 'Git', 'icon' => 'fab fa-git-alt', 'color' => 'text-orange-600', 'border' => 'hover:border-orange-600'],
 ];
 
@@ -202,9 +202,9 @@ $projects = [
             </div>
             
             <div class="mt-16 text-slate-500 text-2xl flex justify-center gap-8">
-                <a href="<?php echo $socials['github']; ?>" class="hover:text-white transition-colors"><i class="fab fa-github"></i></a>
-                <a href="<?php echo $socials['linkedin']; ?>" class="hover:text-white transition-colors"><i class="fab fa-linkedin"></i></a>
-                <a href="<?php echo $socials['twitter']; ?>" class="hover:text-white transition-colors"><i class="fab fa-twitter"></i></a>
+                <a href="<?php echo $socials['github']; ?>" target="_blank" class="hover:text-white transition-colors"><i class="fab fa-github"></i></a>
+                <a href="<?php echo $socials['gmail']; ?>" target="_blank" class="hover:text-white transition-colors"><i class="fa-brands fa-google"></i></a>
+                <a href="<?php echo $socials['facebook']; ?>" target="_blank" class="hover:text-white transition-colors"><i class="fab fa-facebook"></i></a>
             </div>
         </div>
     </section>
@@ -214,7 +214,7 @@ $projects = [
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="relative">
-                    <img src="https://placehold.co/500x500/1e293b/white?text=Profilkép" alt="Profilkép" class="rounded-2xl shadow-2xl border-2 border-slate-700 w-full object-cover">
+                    <img src="/images/profile_picture.jpg" text="Profilkép" alt="Profilkép" class="rounded-2xl shadow-2xl border-2 border-slate-700 w-full object-cover">
                     <!-- Dekoratív elem -->
                     <div class="absolute -bottom-4 -right-4 bg-card p-4 rounded-xl shadow-xl border border-slate-700">
                         <div class="flex items-center gap-3">
@@ -223,7 +223,7 @@ $projects = [
                             </div>
                             <div>
                                 <p class="text-xs text-slate-400">Tapasztalat</p>
-                                <p class="text-white font-bold">3+ Év</p>
+                                <p class="text-white font-bold">1+ Év</p>
                             </div>
                         </div>
                     </div>
@@ -351,7 +351,7 @@ $projects = [
                     </div>
                     <div>
                         <label for="email" class="block text-sm font-medium text-slate-400 mb-2">Email cím</label>
-                        <input type="email" id="email" class="w-full bg-dark border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors" placeholder="<?php echo $personalInfo['email']; ?>">
+                        <input type="email" id="email" class="w-full bg-dark border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors" placeholder="kovacs.janos@example.com">
                     </div>
                 </div>
                 <div>
