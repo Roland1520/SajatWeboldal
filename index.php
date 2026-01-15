@@ -36,32 +36,18 @@ $skills = [
 // Projektek
 $projects = [
     [
-        'title' => 'E-Commerce Webshop',
-        'desc' => 'Egy teljes értékű webáruház kosár funkcióval, fizetési rendszerrel és admin felülettel.',
+        'title' => 'BuzzMatch - weboldal',
+        'desc' => 'A BuzzMatch egy interaktív térképes közösségi alkalmazás, amely valós időben segít megtalálni a legjobb bulikat és társaságot – kevesebb swipe, több shot.',
         'image' => 'https://placehold.co/600x400/2563eb/white?text=Webshop',
-        'tags' => ['React', 'Node.js', 'MongoDB'],
-        'links' => ['github' => '#', 'demo' => '#']
+        'tags' => ['HTML5', 'CSS3', 'Bootstrap'],
+        'links' => ['github' => 'https://github.com/Roland1520/BuzzMatch', 'demo' => 'https://www.buzzmatch.hu/']
     ],
     [
-        'title' => 'Időjárás Alkalmazás',
-        'desc' => 'Valós idejű időjárás adatok lekérése külső API segítségével, város szerinti kereséssel.',
+        'title' => 'BuzzMatch - alkalmazás',
+        'desc' => 'A BuzzMatch egy interaktív térképes közösségi alkalmazás, amely valós időben segít megtalálni a legjobb bulikat és társaságot – kevesebb swipe, több shot.',
         'image' => 'https://placehold.co/600x400/a855f7/white?text=Időjárás+App',
-        'tags' => ['JavaScript', 'API', 'CSS3'],
-        'links' => ['github' => '#', 'demo' => '#']
-    ],
-    [
-        'title' => 'Task Manager',
-        'desc' => 'Hatékonyságnövelő alkalmazás drag-and-drop funkcióval a feladatok rendszerezésére.',
-        'image' => 'https://placehold.co/600x400/22c55e/white?text=Feladatkezelő',
-        'tags' => ['Vue.js', 'Firebase', 'Tailwind'],
-        'links' => ['github' => '#', 'demo' => '#']
-    ],
-    [
-        'title' => 'Valós idejű Chat',
-        'desc' => 'Socket.io alapú chat alkalmazás, privát szobákkal és előzményekkel.',
-        'image' => 'https://placehold.co/600x400/f59e0b/white?text=Chat+App',
-        'tags' => ['Socket.io', 'Express', 'React'],
-        'links' => ['github' => '#', 'demo' => '#']
+        'tags' => ['React-Native', 'API'],
+        'links' => ['github' => 'https://github.com/Roland1520/BuzzMatchApplication', 'demo' => 'https://www.facebook.com/profile.php?id=61584123692380']
     ]
 ];
 ?>
@@ -303,12 +289,12 @@ $projects = [
             <div id="projects-container" class="flex overflow-x-auto gap-6 snap-x snap-mandatory pb-8 hide-scrollbar scroll-smooth">
                 
                 <?php foreach($projects as $project): ?>
-                <div class="min-w-[85vw] sm:min-w-[380px] md:min-w-[350px] lg:min-w-[380px] snap-center project-card bg-card rounded-xl overflow-hidden border border-slate-700 shadow-xl group flex-shrink-0">
+                <div class="min-w-[85vw] sm:min-w-[380px] md:min-w-[350px] lg:min-w-[380px] snap-center project-card bg-card rounded-xl overflow-hidden border border-slate-700 shadow-xl group flex-shrink-0 max-w-sm">
                     <div class="h-48 overflow-hidden relative">
                         <img src="<?php echo $project['image']; ?>" alt="<?php echo $project['title']; ?>" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
-                            <a href="<?php echo $project['links']['github']; ?>" class="bg-white text-black p-3 rounded-full hover:bg-gray-200 transition-colors" title="Forráskód"><i class="fab fa-github"></i></a>
-                            <a href="<?php echo $project['links']['demo']; ?>" class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition-colors" title="Élő demó"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="<?php echo $project['links']['github']; ?>" target="_blank" class="bg-white text-black p-3 rounded-full hover:bg-gray-200 transition-colors" title="Forráskód"><i class="fab fa-github"></i></a>
+                            <a href="<?php echo $project['links']['demo']; ?>" target="_blank" class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition-colors" title="Élő demó"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                     <div class="p-6">
