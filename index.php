@@ -38,14 +38,14 @@ $projects = [
     [
         'title' => 'BuzzMatch - weboldal',
         'desc' => 'A BuzzMatch egy interaktív térképes közösségi alkalmazás, amely valós időben segít megtalálni a legjobb bulikat és társaságot – kevesebb swipe, több shot.',
-        'image' => 'https://placehold.co/600x400/2563eb/white?text=Webshop',
+        'image' => '/images/party.jpg',
         'tags' => ['HTML5', 'CSS3', 'Bootstrap'],
         'links' => ['github' => 'https://github.com/Roland1520/BuzzMatch', 'demo' => 'https://www.buzzmatch.hu/']
     ],
     [
         'title' => 'BuzzMatch - alkalmazás',
         'desc' => 'A BuzzMatch egy interaktív térképes közösségi alkalmazás, amely valós időben segít megtalálni a legjobb bulikat és társaságot – kevesebb swipe, több shot.',
-        'image' => 'https://placehold.co/600x400/a855f7/white?text=Időjárás+App',
+        'image' => '/images/map.jpg',
         'tags' => ['React-Native', 'API'],
         'links' => ['github' => 'https://github.com/Roland1520/BuzzMatchApplication', 'demo' => 'https://www.facebook.com/profile.php?id=61584123692380']
     ]
@@ -314,7 +314,7 @@ $projects = [
             </div>
             
             <div class="text-center mt-12">
-                <a href="<?php echo $socials['github']; ?>" class="inline-block border border-slate-700 hover:border-blue-500 text-slate-300 hover:text-white px-8 py-3 rounded-full transition-all">
+                <a href="<?php echo $socials['github']; ?>" target="_blank" class="inline-block border border-slate-700 hover:border-blue-500 text-slate-300 hover:text-white px-8 py-3 rounded-full transition-all">
                     További projektek a GitHub-on <i class="fab fa-github ml-2"></i>
                 </a>
             </div>
@@ -333,18 +333,18 @@ $projects = [
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
                         <label for="name" class="block text-sm font-medium text-slate-400 mb-2">Név</label>
-                        <input type="text" id="name" class="w-full bg-dark border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors" placeholder="Kovács János">
+                        <input type="text" id="nameSend" class="w-full bg-dark border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors" placeholder="Kovács János">
                     </div>
                     <div>
                         <label for="email" class="block text-sm font-medium text-slate-400 mb-2">Email cím</label>
-                        <input type="email" id="email" class="w-full bg-dark border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors" placeholder="kovacs.janos@example.com">
+                        <input type="email" id="emailSend" class="w-full bg-dark border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors" placeholder="kovacs.janos@example.com">
                     </div>
                 </div>
                 <div>
                     <label for="message" class="block text-sm font-medium text-slate-400 mb-2">Üzenet</label>
-                    <textarea id="message" rows="4" class="w-full bg-dark border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors" placeholder="Ide írd az üzeneted..."></textarea>
+                    <textarea id="messageSend" rows="4" class="w-full bg-dark border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors" placeholder="Ide írd az üzeneted..."></textarea>
                 </div>
-                <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 rounded-lg transition-all transform hover:scale-[1.02] shadow-lg">
+                <button type="submit" onclick="sendEmail()" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 rounded-lg transition-all transform hover:scale-[1.02] shadow-lg">
                     Üzenet küldése <i class="fas fa-paper-plane ml-2"></i>
                 </button>
             </form>
@@ -395,6 +395,17 @@ $projects = [
                 container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
             } else {
                 container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        }
+
+        function sendMail() {
+            const name = document.getElementById('nameSend');
+            const email = document.getElementById('emailSend');
+            const message = document.getElementById('messageSend');
+
+            if (name == '' || email == '' || message == '') {
+                alert('Kérlek, töltsd ki az összes mezőt!');
+                return;
             }
         }
     </script>
