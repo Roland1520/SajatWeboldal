@@ -216,8 +216,6 @@ $content = [
     
     <script type="text/javascript">
         (function() {
-            // Initialize EmailJS with your Public Key
-            // TODO: REPLACE 'YOUR_PUBLIC_KEY' WITH YOUR ACTUAL PUBLIC KEY FROM EMAILJS DASHBOARD
             emailjs.init("t-4L8sJ8QnE-1FOG0");
         })();
     </script>
@@ -303,23 +301,23 @@ $content = [
             <form id="contact-form" class="space-y-5" onsubmit="sendEmail(event)">
                 <div>
                     <label class="block text-xs font-mono text-gray-500 uppercase tracking-wider mb-2" data-key="form.name">Név</label>
-                    <input type="text" id="input-name" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#7795b9] focus:ring-1 focus:ring-[#7795b9] transition-all placeholder:text-white/20">
+                    <input type="text" id="input-name" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#7795b9] focus:ring-1 focus:ring-[#7795b9] transition-all placeholder:text-white/20" placeholder="Kovács János">
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div>
                         <label class="block text-xs font-mono text-gray-500 uppercase tracking-wider mb-2" data-key="form.email">Email cím</label>
-                        <input type="email" id="input-email" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#7795b9] focus:ring-1 focus:ring-[#7795b9] transition-all placeholder:text-white/20">
+                        <input type="email" id="input-email" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#7795b9] focus:ring-1 focus:ring-[#7795b9] transition-all placeholder:text-white/20" placeholder="janos@pelda.hu">
                     </div>
                     <div>
                         <label class="block text-xs font-mono text-gray-500 uppercase tracking-wider mb-2" data-key="form.phone">Telefonszám</label>
-                        <input type="tel" id="input-phone" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#7795b9] focus:ring-1 focus:ring-[#7795b9] transition-all placeholder:text-white/20">
+                        <input type="tel" id="input-phone" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#7795b9] focus:ring-1 focus:ring-[#7795b9] transition-all placeholder:text-white/20" placeholder="+36 20 123 4567">
                     </div>
                 </div>
 
                 <div>
                     <label class="block text-xs font-mono text-gray-500 uppercase tracking-wider mb-2" data-key="form.message">Üzenet</label>
-                    <textarea rows="4" id="input-message" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#7795b9] focus:ring-1 focus:ring-[#7795b9] transition-all resize-none placeholder:text-white/20"></textarea>
+                    <textarea rows="4" id="input-message" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#7795b9] focus:ring-1 focus:ring-[#7795b9] transition-all resize-none placeholder:text-white/20" placeholder="Hogyan segíthetek?"></textarea>
                 </div>
 
                 <button type="submit" id="submit-btn" class="w-full bg-gradient-to-r from-[#7795b9] to-[#feccf2] text-black font-bold font-display uppercase tracking-widest py-4 rounded-lg hover:opacity-90 transition-opacity mt-4">
